@@ -18,8 +18,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0C-2K-Fz3" userLabel="ShowPopUp">
-                                <rect key="frame" x="254" y="180" width="92" height="30"/>
-                                <state key="normal" title="Show pop up">
+                                <rect key="frame" x="200" y="95" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="72g-zF-5Vi"/>
+                                    <constraint firstAttribute="width" constant="200" id="naI-K5-Ffl"/>
+                                </constraints>
+                                <state key="normal" title="Show pop up" backgroundImage="buttonImg.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -36,12 +41,23 @@
                                     <action selector="maskButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hhj-d8-cUU"/>
                                 </connections>
                             </button>
-                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ke-Yn-BiY">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ke-Yn-BiY">
                                 <rect key="frame" x="0.0" y="390" width="600" height="210"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZzR-N3-f8m">
+                                        <rect key="frame" x="67" y="52" width="40" height="40"/>
+                                        <state key="normal" title="icon">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="74J-cp-dbG"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.3657536401" green="0.75884650929999997" blue="0.59918749780000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="uTK-A8-aI5" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="0ka-es-ZbK"/>
                             <constraint firstAttribute="trailing" secondItem="uTK-A8-aI5" secondAttribute="trailing" id="SsL-Qk-zg1"/>
@@ -54,14 +70,23 @@
                             <constraint firstAttribute="centerY" secondItem="m0C-2K-Fz3" secondAttribute="centerY" constant="105" id="wqr-jz-ULz"/>
                             <constraint firstItem="0ke-Yn-BiY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="xzH-Q8-8Eh"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="wTV-WQ-IZD"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="maskButton" destination="uTK-A8-aI5" id="itz-qr-FVb"/>
                         <outlet property="scrollView" destination="0ke-Yn-BiY" id="ZXW-dM-u6m"/>
+                        <outlet property="showPopUpButton" destination="m0C-2K-Fz3" id="DFg-ve-7cB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="buttonImg.png" width="2000" height="1500"/>
+    </resources>
 </document>
