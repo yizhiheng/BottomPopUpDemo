@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="BottomPopUpDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,8 +16,49 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0C-2K-Fz3" userLabel="ShowPopUp">
+                                <rect key="frame" x="254" y="180" width="92" height="30"/>
+                                <state key="normal" title="Show pop up">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showPopUpButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Is0-ar-YLL"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTK-A8-aI5" userLabel="MaskButton">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="maskButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hhj-d8-cUU"/>
+                                </connections>
+                            </button>
+                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ke-Yn-BiY">
+                                <rect key="frame" x="0.0" y="390" width="600" height="210"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3657536401" green="0.75884650929999997" blue="0.59918749780000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="uTK-A8-aI5" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="0ka-es-ZbK"/>
+                            <constraint firstAttribute="trailing" secondItem="uTK-A8-aI5" secondAttribute="trailing" id="SsL-Qk-zg1"/>
+                            <constraint firstItem="uTK-A8-aI5" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="UQQ-Ap-Plr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0ke-Yn-BiY" secondAttribute="trailing" constant="-16" id="cRt-Wh-BbO"/>
+                            <constraint firstAttribute="centerX" secondItem="m0C-2K-Fz3" secondAttribute="centerX" id="n68-Gd-L4W"/>
+                            <constraint firstItem="uTK-A8-aI5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="q3O-FS-y5E"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="0ke-Yn-BiY" secondAttribute="bottom" id="th4-ny-T8Q"/>
+                            <constraint firstItem="0ke-Yn-BiY" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="370" id="wTV-WQ-IZD"/>
+                            <constraint firstAttribute="centerY" secondItem="m0C-2K-Fz3" secondAttribute="centerY" constant="105" id="wqr-jz-ULz"/>
+                            <constraint firstItem="0ke-Yn-BiY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="xzH-Q8-8Eh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="maskButton" destination="uTK-A8-aI5" id="itz-qr-FVb"/>
+                        <outlet property="scrollView" destination="0ke-Yn-BiY" id="ZXW-dM-u6m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
