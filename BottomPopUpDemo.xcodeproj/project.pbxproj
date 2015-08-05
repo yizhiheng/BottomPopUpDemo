@@ -799,6 +799,7 @@
 				8130AA4C1B716B970054DB38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8130AA4D1B716B970054DB38 /* Build configuration list for PBXNativeTarget "BottomPopUpDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -807,6 +808,7 @@
 				8130AA4F1B716B970054DB38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

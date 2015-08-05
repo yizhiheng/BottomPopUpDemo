@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -42,18 +41,10 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ke-Yn-BiY">
-                                <rect key="frame" x="0.0" y="390" width="600" height="210"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZzR-N3-f8m">
-                                        <rect key="frame" x="67" y="52" width="40" height="40"/>
-                                        <state key="normal" title="icon">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                </subviews>
+                                <rect key="frame" x="0.0" y="300" width="600" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="210" id="74J-cp-dbG"/>
+                                    <constraint firstAttribute="height" constant="300" id="74J-cp-dbG"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -62,16 +53,18 @@
                             <constraint firstItem="uTK-A8-aI5" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="0ka-es-ZbK"/>
                             <constraint firstAttribute="trailing" secondItem="uTK-A8-aI5" secondAttribute="trailing" id="SsL-Qk-zg1"/>
                             <constraint firstItem="uTK-A8-aI5" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="UQQ-Ap-Plr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0ke-Yn-BiY" secondAttribute="trailing" constant="-16" id="cRt-Wh-BbO"/>
+                            <constraint firstAttribute="trailing" secondItem="0ke-Yn-BiY" secondAttribute="trailing" id="cRt-Wh-BbO"/>
                             <constraint firstAttribute="centerX" secondItem="m0C-2K-Fz3" secondAttribute="centerX" id="n68-Gd-L4W"/>
                             <constraint firstItem="uTK-A8-aI5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="q3O-FS-y5E"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="0ke-Yn-BiY" secondAttribute="bottom" id="th4-ny-T8Q"/>
                             <constraint firstItem="0ke-Yn-BiY" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="370" id="wTV-WQ-IZD"/>
                             <constraint firstAttribute="centerY" secondItem="m0C-2K-Fz3" secondAttribute="centerY" constant="105" id="wqr-jz-ULz"/>
-                            <constraint firstItem="0ke-Yn-BiY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="xzH-Q8-8Eh"/>
+                            <constraint firstAttribute="trailing" secondItem="0ke-Yn-BiY" secondAttribute="trailing" id="xs7-GQ-Pvd"/>
+                            <constraint firstItem="0ke-Yn-BiY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="xzH-Q8-8Eh"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="cRt-Wh-BbO"/>
                                 <exclude reference="wTV-WQ-IZD"/>
                             </mask>
                         </variation>
